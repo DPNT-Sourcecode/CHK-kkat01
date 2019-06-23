@@ -3,7 +3,8 @@
 # noinspection PyUnusedLocal
 # friend_name = unicode string
 def hello(friend_name):
-    hlo = 'Hello, World!'
-    return(hlo)
+    return_msg = 'Hello, {}'.format(friend_name)
+    return(return_msg)
+
 
 
