@@ -19,25 +19,27 @@ def checkout(skus):
         print(SKU)
         if SKU not in validate_input:
             return -1
+        for entry in validate_data:
 
-        if 'A' in validate_input:
-            special_A_counter = skus_list.count('A')
-            if special_A_counter % 3 == 0:
-                offer_A_multiplier = special_A_counter / 3
-                tmp_price += (SKU['special_price'] * offer_A_multiplier)
+            if 'A' in validate_input:
+                special_A_counter = skus_list.count('A')
+                if special_A_counter % 3 == 0:
+                    offer_A_multiplier = special_A_counter / 3
+                    tmp_price += (entry['special_price'] * offer_A_multiplier)
 
-        if 'B' in validate_input:
-            special_B_counter = skus_list.count('B')
-            if special_A_counter % 2 == 0:
-                offer_B_multiplier = special_B_counter / 2
-                tmp_price += (SKU['special_price'] * offer_B_multiplier)
+            if 'B' in validate_input:
+                special_B_counter = skus_list.count('B')
+                if special_A_counter % 2 == 0:
+                    offer_B_multiplier = special_B_counter / 2
+                    tmp_price += (entry['special_price'] * offer_B_multiplier)
 
-        if not SKU['special_offer']:
-            tmp_price += SKU['price']
+            if not entry['special_offer']:
+                tmp_price += entry['price']
 
     return tmp_price
     #raise NotImplementedError()
 
 checkout('C,D')
+
 
 
