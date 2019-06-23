@@ -27,18 +27,18 @@ def checkout(skus):
             return -1
 
         if SKU == 'A':
-            if A_counter < 3:
+            if A_counter < 2:
                 A_counter += 1
                 tmp_price += validate_data[0]['price']
-            elif A_counter >= 3:
+            elif A_counter >= 2:
                 A_counter = 0
                 tmp_price -= (2*(validate_data[0]['price']))
                 tmp_price += validate_data[0]['special_price']
         elif SKU == 'B':
-            if B_counter < 2:
+            if B_counter < 1:
                 B_counter += 1
                 tmp_price += validate_data[1]['price']
-            elif B_counter >= 2:
+            elif B_counter >= 1:
                 B_counter = 0
                 tmp_price -= validate_data[1]['price']
                 tmp_price += validate_data[1]['special_price']
@@ -48,12 +48,4 @@ def checkout(skus):
             tmp_price += validate_data[3]['price']
 
     return tmp_price
-
-
-
-
-
-
-
-
 
