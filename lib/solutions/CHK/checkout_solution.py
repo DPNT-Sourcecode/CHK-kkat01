@@ -11,12 +11,12 @@ def checkout(skus):
 
     if not isinstance(skus, str):
         return -1
-    print(skus)
+
     skus_list = list(skus)
 
     tmp_price = 0
     for SKU in skus_list:
-        print(SKU)
+
         if SKU not in validate_input:
             return -1
         for entry in validate_data:
@@ -40,6 +40,7 @@ def checkout(skus):
     #raise NotImplementedError()
 
 checkout('C,D')
+
 
 
 
