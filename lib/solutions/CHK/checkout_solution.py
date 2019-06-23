@@ -9,4 +9,7 @@ def checkout(skus):
     skus_list = skus.split(',')
     #raise NotImplementedError()
 
+checkout('C,D')
+
+
 
