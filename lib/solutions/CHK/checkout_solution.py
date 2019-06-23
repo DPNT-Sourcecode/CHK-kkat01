@@ -3,6 +3,10 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
-    print skus
+    if not isinstance(skus, unicode):
+        return -1
+    print(skus)
+    skus_list = skus.split(',')
     #raise NotImplementedError()
+
 
