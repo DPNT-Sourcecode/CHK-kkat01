@@ -17,7 +17,7 @@ def checkout(skus):
     tmp_price = 0
     A_counter = 0
     B_counter = 0
-    
+
     for SKU in skus_list:
         if SKU not in validate_input:
             return -1
@@ -41,6 +41,6 @@ def checkout(skus):
                 tmp_price += entry['price']
 
     return tmp_price
-    #raise NotImplementedError()
+
 
 
