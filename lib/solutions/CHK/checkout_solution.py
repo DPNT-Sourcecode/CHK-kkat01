@@ -9,14 +9,15 @@ def checkout(skus):
                      {'item': 'C', 'price': 20, 'special_offer': '', 'special_price': 0},
                      {'item': 'D', 'price': 15, 'special_offer': '', 'special_price': 0}]
 
-    if skus == '':
-        return -1
-
-    skus_list = list(skus)
-
     tmp_price = 0
     A_counter = 0
     B_counter = 0
+
+    if skus == '':
+        return tmp_price
+
+    skus_list = list(skus)
+
 
     for SKU in skus_list:
         if SKU not in validate_input:
@@ -44,6 +45,7 @@ def checkout(skus):
             tmp_price += validate_data[3]['price']
 
     return tmp_price
+
 
 
 
