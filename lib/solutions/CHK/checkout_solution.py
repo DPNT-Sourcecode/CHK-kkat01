@@ -18,6 +18,9 @@ def checkout(skus):
 
     skus_list = list(skus)
 
+    if len(skus) == 1 and skus_list[0] not in validate_input:
+        return -1
+
 
     for SKU in skus_list:
         if SKU not in validate_input:
@@ -45,6 +48,7 @@ def checkout(skus):
             tmp_price += validate_data[3]['price']
 
     return tmp_price
+
 
 
 
