@@ -24,23 +24,30 @@ def checkout(skus):
 
         for entry in validate_data:
             if SKU == 'A':
-                if A_counter < 3:
-                    A_counter += 1
+                if skus_list.count('A') < 3:
+                    tmp_price += entry['price']
                 else:
-                    # add special offer value and reset counter
-                    tmp_price += entry['special_price']
-                    A_counter = 0
+                    if A_counter < 3:
+                        A_counter += 1
+                    else:
+                        # add special offer value and reset counter
+                        tmp_price += entry['special_price']
+                        A_counter = 0
             elif SKU == 'B':
-                if B_counter < 2:
-                    B_counter += 1
+                if skus_list.count('B') < 2:
+                    tmp_price += entry['price']
                 else:
-                    # add special offer value and reset counter
-                    tmp_price += entry['special_price']
-                    B_counter = 0
+                    if B_counter < 2:
+                        B_counter += 1
+                    else:
+                        # add special offer value and reset counter
+                        tmp_price += entry['special_price']
+                        B_counter = 0
             else:
                 tmp_price += entry['price']
 
     return tmp_price
+
 
 
 
