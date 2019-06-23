@@ -39,8 +39,3 @@ def checkout(skus):
     return tmp_price
     #raise NotImplementedError()
 
-checkout('C,D')
-
-
-
-
