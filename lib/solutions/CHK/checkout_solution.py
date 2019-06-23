@@ -14,8 +14,3 @@ def checkout(skus):
     #raise NotImplementedError()
 
 checkout('C,D')
-
-
-
-
-
