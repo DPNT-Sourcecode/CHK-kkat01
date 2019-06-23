@@ -9,7 +9,7 @@ def checkout(skus):
                      {'item': 'C', 'price': 20, 'special_offer': '', 'special_price': 0},
                      {'item': 'D', 'price': 15, 'special_offer': '', 'special_price': 0}]
 
-    if not isinstance(skus, str):
+    if skus == '':
         return -1
 
     skus_list = list(skus)
@@ -44,6 +44,7 @@ def checkout(skus):
             tmp_price += validate_data[3]['price']
 
     return tmp_price
+
 
 
 
